@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petpals>
+
+    <mascotas>
+        <mascota>
+            <id>1</id>
+            <nombre>Buddy</nombre>
+            <especie>Perro</especie>
+            <raza>Golden Retriever</raza>
+            <edad>3</edad>
+            <dueño>Alex Johnson</dueño>
+            <estado>Saludable</estado>
+            <ultimaVisita>2023-10-12</ultimaVisita>
+            <expediente>
+                <registro>
+                    <fecha>2023-10-12</fecha>
+                    <diagnostico>Sano</diagnostico>
+                    <tratamiento>Vacuna antirrábica</tratamiento>
+                    <veterinario>Dra. Elena Rostova</veterinario>
+                </registro>
+                <registro>
+                    <fecha>2023-03-15</fecha>
+                    <diagnostico>Otitis leve</diagnostico>
+                    <tratamiento>Gotas óticas 7 días</tratamiento>
+                    <veterinario>Dr. Marcos Vidal</veterinario>
+                </registro>
+            </expediente>
+        </mascota>
+
+        <mascota>
+            <id>2</id>
+            <nombre>Luna</nombre>
+            <especie>Gato</especie>
+            <raza>British Shorthair</raza>
+            <edad>5</edad>
+            <dueño>Alex Johnson</dueño>
+            <estado>Vacunas Pendientes</estado>
+            <ultimaVisita>2023-08-24</ultimaVisita>
+            <expediente>
+                <registro>
+                    <fecha>2023-08-24</fecha>
+                    <diagnostico>Sana</diagnostico>
+                    <tratamiento>Chequeo de rutina</tratamiento>
+                    <veterinario>Dr. Marcos Vidal</veterinario>
+                </registro>
+                <registro>
+                    <fecha>2026-06-06</fecha>
+                    <diagnostico>Pendiente</diagnostico>
+                    <tratamiento>Vacunas anuales</tratamiento>
+                    <veterinario>Dra. Elena Rostova</veterinario>
+                </registro>
+            </expediente>
+        </mascota>
+
+        <mascota>
+            <id>3</id>
+            <nombre>Max</nombre>
+            <especie>Perro</especie>
+            <raza>Labrador</raza>
+            <edad>4</edad>
+            <dueño>Patricia Salinas</dueño>
+            <estado>En revisión</estado>
+            <ultimaVisita>2026-06-10</ultimaVisita>
+            <expediente></expediente>
+        </mascota>
+
+        <mascota>
+            <id>4</id>
+            <nombre>Rocky</nombre>
+            <especie>Perro</especie>
+            <raza>Bulldog</raza>
+            <edad>4</edad>
+            <dueño>Carlos Méndez</dueño>
+            <estado>Urgente</estado>
+            <ultimaVisita>2026-06-10</ultimaVisita>
+            <expediente></expediente>
+        </mascota>
+    </mascotas>
+
+    <citas>
+        <cita>
+            <id>1</id>
+            <hora>09:00</hora>
+            <mascota>Buddy</mascota>
+            <dueño>Alex Johnson</dueño>
+            <motivo>Chequeo general</motivo>
+            <estado>Confirmada</estado>
+        </cita>
+        <cita>
+            <id>2</id>
+            <hora>11:30</hora>
+            <mascota>Luna</mascota>
+            <dueño>Alex Johnson</dueño>
+            <motivo>Vacunación</motivo>
+            <estado>Confirmada</estado>
+        </cita>
+        <cita>
+            <id>3</id>
+            <hora>14:00</hora>
+            <mascota>Max</mascota>
+            <dueño>Patricia Salinas</dueño>
+            <motivo>Revisión laboratorio</motivo>
+            <estado>Pendiente</estado>
+        </cita>
+        <cita>
+            <id>4</id>
+            <hora>16:45</hora>
+            <mascota>Rocky</mascota>
+            <dueño>Carlos Méndez</dueño>
+            <motivo>Dificultad respiratoria</motivo>
+            <estado>Urgente</estado>
+        </cita>
+    </citas>
+
+    <historialMedico>
+        <registro>
+            <fecha>2023-10-12</fecha>
+            <mascota>Buddy</mascota>
+            <tipoConsulta>Vacunación</tipoConsulta>
+            <veterinario>Dra. Elena Rostova</veterinario>
+            <estado>Completado</estado>
+        </registro>
+        <registro>
+            <fecha>2023-08-24</fecha>
+            <mascota>Luna</mascota>
+            <tipoConsulta>Chequeo General</tipoConsulta>
+            <veterinario>Dr. Marcos Vidal</veterinario>
+            <estado>Completado</estado>
+        </registro>
+        <registro>
+            <fecha>2026-06-06</fecha>
+            <mascota>Luna</mascota>
+            <tipoConsulta>Vacunación</tipoConsulta>
+            <veterinario>Dra. Elena Rostova</veterinario>
+            <estado>Pendiente</estado>
+        </registro>
+    </historialMedico>
+
+</petpals>

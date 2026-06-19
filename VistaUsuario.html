@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPals - Mi Panel</title>
+    <link rel="icon" href="img/salud.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/Usuario.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-paw"></i> PetPals</h1>
+        <p>Panel del Dueño de Mascota</p>
+    </header>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <a href="#mis-mascotas"><i class="fa-solid fa-dog"></i> Mis Mascotas</a>
+                <a href="#citas"><i class="fa-solid fa-calendar-check"></i> Citas</a>
+                <a href="#historial"><i class="fa-solid fa-file-medical"></i> Historial Médico</a>
+                <a href="LoginUribe.html"><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECCIÓN BIENVENIDA -->
+        <section id="bienvenida">
+            <h2><i class="fa-solid fa-hand-wave"></i> ¡Hola!</h2>
+            <p>Bienvenido de vuelta a tu panel. Aquí puedes gestionar todo lo relacionado con tus mascotas.</p>
+            <p><strong>Resumen rápido:</strong></p>
+            <ul>
+                <li><i class="fa-solid fa-dog"></i> Tienes <strong>2 mascotas</strong> registradas</li>
+                <li><i class="fa-solid fa-calendar-day"></i> Tu próxima cita es el <strong>6 de junio de 2026</strong></li>
+                <li><i class="fa-solid fa-triangle-exclamation"></i> Luna tiene <strong>vacunas pendientes</strong></li>
+            </ul>
+            <div class="mt-md">
+                <a href="#citas">
+                    <button type="button" class="btn-agendar">
+                        <i class="fa-solid fa-calendar-plus"></i> Agendar Nueva Cita
+                    </button>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MIS MASCOTAS — TARJETAS CON FLEXBOX -->
+        <section id="mis-mascotas">
+            <h2><i class="fa-solid fa-paw"></i> Mis Mascotas</h2>
+
+            <!-- Contenedor flex: las tarjetas se ubican lado a lado -->
+            <div class="contenedor-tarjetas">
+
+                <article class="tarjeta">
+                    <h3><i class="fa-solid fa-bone"></i> Buddy</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>Raza:</strong></td>
+                                <td>Golden Retriever</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Edad:</strong></td>
+                                <td>3 años</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Estado:</strong></td>
+                                <td><span class="badge bg-success"><i class="fa-solid fa-circle-check"></i> Saludable</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-sm">
+                        <button type="button" class="btn-agendar" data-bs-toggle="modal" data-bs-target="#modalMascota" data-mascota="buddy">
+                            Ver historial médico <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3><i class="fa-solid fa-cat"></i> Luna</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>Raza:</strong></td>
+                                <td>British Shorthair</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Edad:</strong></td>
+                                <td>5 años</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Estado:</strong></td>
+                                <td><span class="badge bg-warning text-dark"><i class="fa-solid fa-triangle-exclamation"></i> Vacunas Pendientes</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-sm">
+                        <button type="button" class="btn-agendar" data-bs-toggle="modal" data-bs-target="#modalMascota" data-mascota="luna">
+                            Ver historial médico <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- MODAL DE DETALLE DE MASCOTA (Bootstrap) -->
+        <div class="modal fade modal-mascota" id="modalMascota" tabindex="-1" aria-labelledby="modalMascotaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMascotaLabel"><i class="fa-solid fa-paw"></i> Detalle de la mascota</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Aquí se mostrará el historial médico completo, vacunas y próximas citas de la mascota seleccionada.</p>
+                        <p>Esta información, en una etapa posterior del proyecto, podrá obtenerse directamente desde un servidor o una API conectada a la base de datos.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-agendar secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#historial" class="btn-agendar" data-bs-dismiss="modal">Ir al historial completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN CITAS — FORMULARIO EN GRID DE 2 COLUMNAS -->
+        <section id="citas">
+            <h2><i class="fa-solid fa-calendar-plus"></i> Agendar Nueva Cita</h2>
+
+            <form action="#" method="GET" class="formulario-citas">
+
+                <div class="form-group">
+                    <label for="mascota-cita">Selecciona tu mascota:</label>
+                    <select id="mascota-cita" name="mascota" required>
+                        <option value="" disabled selected>Selecciona una mascota</option>
+                        <option value="buddy">Buddy - Golden Retriever</option>
+                        <option value="luna">Luna - British Shorthair</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo-cita">Motivo de la consulta:</label>
+                    <select id="motivo-cita" name="motivo" required>
+                        <option value="" disabled selected>Selecciona el motivo</option>
+                        <option value="chequeo">Chequeo general</option>
+                        <option value="vacuna">Vacunación</option>
+                        <option value="cirugia">Cirugía</option>
+                        <option value="emergencia">Emergencia</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-cita">Fecha de la cita:</label>
+                    <input type="date" id="fecha-cita" name="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora-cita">Hora disponible:</label>
+                    <select id="hora-cita" name="hora" required>
+                        <option value="" disabled selected>Selecciona una hora</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="16:45">04:45 PM</option>
+                    </select>
+                </div>
+
+                <!-- Textarea ocupa las 2 columnas (campo-ancho) -->
+                <div class="form-group campo-ancho">
+                    <label for="notas-cita">Notas adicionales:</label>
+                    <textarea id="notas-cita" name="notas" rows="3" placeholder="Describe los síntomas u observaciones..."></textarea>
+                </div>
+
+                <!-- Botón ocupa las 2 columnas -->
+                <button type="submit" class="btn-agendar campo-ancho">
+                    <i class="fa-solid fa-square-check"></i> Confirmar Cita
+                </button>
+
+            </form>
+        </section>
+
+        <!-- SECCIÓN HISTORIAL MÉDICO -->
+        <section id="historial">
+            <h2><i class="fa-solid fa-clipboard-list"></i> Historial Médico Reciente</h2>
+
+            <div class="table-responsive">
+                <table class="tabla-historial">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Mascota</th>
+                            <th>Tipo de Consulta</th>
+                            <th>Veterinario</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12/10/2023</td>
+                            <td>Buddy</td>
+                            <td>Vacunación</td>
+                            <td>Dra. Elena Rostova</td>
+                            <td><span class="badge bg-success"><i class="fa-solid fa-circle-check"></i> Completado</span></td>
+                        </tr>
+                        <tr>
+                            <td>24/08/2023</td>
+                            <td>Luna</td>
+                            <td>Chequeo General</td>
+                            <td>Dr. Marcos Vidal</td>
+                            <td><span class="badge bg-success"><i class="fa-solid fa-circle-check"></i> Completado</span></td>
+                        </tr>
+                        <tr>
+                            <td>06/06/2026</td>
+                            <td>Luna</td>
+                            <td>Vacunación</td>
+                            <td>Dra. Elena Rostova</td>
+                            <td><span class="badge bg-warning text-dark"><i class="fa-solid fa-hourglass-half"></i> Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© PetPals 2026 - Proyecto Fundamentos Web</p>
+        <p>Universidad de las Fuerzas Armadas ESPE</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
