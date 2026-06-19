@@ -16,7 +16,7 @@
 }
 
 #panel-veterinario h2 {
-    color: #1565c0;
+    color: #0b0b0b;
 }
 
 /* ============================================================
@@ -57,7 +57,7 @@
 .stat-card .stat-numero {
     font-size: 2rem;
     font-weight: bold;
-    color: #1565c0;
+    color: #000000;
     display: block;
     margin-bottom: 4px;
 }
@@ -101,7 +101,7 @@
 }
 
 .tarjeta-paciente h3 {
-    color: #1565c0;
+    color: #060606;
     margin-bottom: 10px;
 }
 
@@ -109,7 +109,7 @@
    BLOQUE 4: TABLA DE AGENDA DEL DÍA
    ============================================================ */
 #agenda h2 {
-    color: #1565c0;
+    color: #000000;
     margin-bottom: 14px;
 }
 
@@ -119,7 +119,7 @@
 }
 
 .tabla-agenda th {
-    background-color: #1565c0;
+    background-color: #425d7c;
     color: #ffffff;
     padding: 10px 14px;
     text-align: left;
