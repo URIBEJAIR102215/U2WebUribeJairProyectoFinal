@@ -37,7 +37,7 @@
     }
 }
 
-/* Escritorio: las cuatro tarjetas en una sola fila */
+/* Escritorio: las cuatro tarjetas en una sola fila division*/
 @media (min-width: 992px) {
     .grid-estadisticas {
         grid-template-columns: repeat(4, 1fr);
@@ -50,7 +50,7 @@
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);/* sombra al pasar el mouse*/
     box-sizing: border-box;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .stat-card .stat-urgente {
-    color: #c62828;
+    color: #c62828;/* pinta cuando el numero es urgente*/
 }
 
 .stat-card p {
