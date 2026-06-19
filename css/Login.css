@@ -84,31 +84,41 @@
     color: #555555;
 }
 
-/* ============================================================
-   BLOQUE 5: CARRUSEL DE BIENVENIDA (Bootstrap)
-   Mobile-first: altura reducida en celular, mayor en escritorio.
-   ============================================================ */
 #carrusel-bienvenida {
     max-width: 700px;
     margin: 16px auto 24px;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#carrusel-bienvenida .carousel-inner {
+    background-color: #1b5e20;
 }
 
 #carrusel-bienvenida .carousel-item img {
-    height: 200px;
-    object-fit: cover;
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    object-position: center !important;
 }
 
 #carrusel-bienvenida .carousel-caption {
-    background-color: rgba(27, 94, 32, 0.55);
+    background-color: rgba(27, 94, 32, 0.65);
     border-radius: 6px;
     padding: 8px 12px;
 }
 
+#carrusel-bienvenida .carousel-caption h5 {
+    font-size: 1rem;
+}
+
 @media (min-width: 768px) {
     #carrusel-bienvenida .carousel-item img {
-        height: 320px;
+        height: 400px !important;
+    }
+
+    #carrusel-bienvenida .carousel-caption h5 {
+        font-size: 1.25rem;
     }
 }
