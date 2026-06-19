@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetPals - Iniciar Sesión</title>
-    <link rel="icon" href="img/salud.ico">
+    <link class="icon" href="img/salud.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/general.css">
@@ -31,7 +31,6 @@
     </nav>
 
     <main>
-        <!-- CARRUSEL DE BIENVENIDA (Bootstrap) -->
         <div id="carrusel-bienvenida" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carrusel-bienvenida" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
@@ -71,33 +70,30 @@
         <section id="login-principal">
             <h2><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</h2>
 
-            <form action="#">
-                <label>Selecciona tu rol:</label>
-                <div class="radio-group">
-                    <label class="radio-option">
-                        <input type="radio" name="rol" checked>
-                        <i class="fa-solid fa-dog"></i> Dueño
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="rol">
-                        <i class="fa-solid fa-heart-pulse"></i> Veterinario
-                    </label>
+            <form method="get">
+                
+                <div class="form-group mb-3">
+                    <label>Correo electrónico:</label>
+                    <input type="email" name="correo" placeholder="ejemplo@correo.com" required class="form-control">
                 </div>
 
-                <div class="form-group">
-                    <label>📩 Correo electrónico:</label>
-                    <input type="email" placeholder="ejemplo@correo.com" required>
+                <div class="form-group mb-4">
+                    <label>Contraseña:</label>
+                    <input type="password" name="contrasena" placeholder="••••••••" required class="form-control">
                 </div>
 
-                <div class="form-group">
-                    <label>👤 Contraseña:</label>
-                    <input type="password" placeholder="••••••••" required>
-                </div>
-
-                <button type="submit"><i class="fa-solid fa-play"></i> Ingresar al Sistema</button>
+               <div class="d-flex justify-content-center gap-2 mt-3">
+    <button type="submit" formaction="VistaUsuario.html" class="btn btn-success btn-sm">
+        <i class="fa-solid fa-dog"></i> Ingresar como Dueño
+    </button>
+    
+    <button type="submit" formaction="VistaVeterinario.html" class="btn btn-success btn-sm">
+        <i class="fa-solid fa-heart-pulse"></i> Ingresar como Veterinario
+    </button>
+</div>
+                
             </form>
-
-           </section>
+        </section>
     </main>
 
     <footer>
